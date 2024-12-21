@@ -1,0 +1,60 @@
+
+
+<div class="author">
+  <h1 class="author__heading">Hi, I am Raddy.</h1>
+  <p class="author__body">Web developer and content creator.</p>
+</div>
+
+<img
+  src="https://thumbs.dreamstime.com/b/d-cartoon-backdrop-cozy-house-snow-christmas-decorations-candy-canes-beautiful-image-covered-adorned-surrounded-326664818.jpg""
+  alt="person looking out through window"
+  class="hero-image"
+  width="981"
+  height="528"
+/>
+
+<h2 class="articles__heading pl-2">Elizabeth Enechaziam</h2>
+ <input type="text" placeholder="what's new?" class ="italic bg-[#E4E4E4]"></input>
+
+  <ul class="article-ul pl-2 pr-2">
+    <% blogs.forEach(blog => { %>
+    <li>
+      <a href="/blog/<%= blog._id %>" class="">
+      
+      
+        <div>
+            <div class="text-sm md:text-xl lg:2xl font-bold"><%= blog.author %></div>
+        <div class="text-sm md:text-xl lg:2xl"><%= blog.title %></div>
+        <div>  
+            <div class="">
+                <i class="fa-regular fa-heart text-sm md:text-xl lg:2xl"></i>
+                <i class="fa-regular fa-comment text-sm md:text-xl lg:2xl px-0 md:px-2"></i>
+                <i class="fa-solid fa-share text-sm md:text-xl lg:2xl"></i>
+            </div>
+        </div>
+
+        </div>
+       
+       
+        <span class="article-list__date text-sm md:text-xl lg:2xl"
+          ><%= blog.createdAt.toDateString() %></span
+        >
+      </a>
+    </li>
+    <% }) %>
+  </ul>
+  
+  <div class="text-right pr-12 ">
+    <% if (nextPage!== null) { %>
+      <a href="/?page=<%= nextPage %>" class="pagination text-sm md:text-xl lg:2xl">&lt; View Older Posts</a>
+    <% } %>
+  </div>
+  
+</section>
+
+
+
+
+
+
+  
